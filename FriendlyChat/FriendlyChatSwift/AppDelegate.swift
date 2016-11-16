@@ -18,6 +18,7 @@ import UIKit
 import Firebase
 import FirebaseAuthUI
 
+
 // MARK: - AppDelegate: UIResponder, UIApplicationDelegate
 
 @UIApplicationMain
@@ -34,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        return FIRAuthUI.default()?.handleOpen(url, sourceApplication: sourceApplication ?? "") ?? false
-//    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        return FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication ?? "") ?? false
+    }
 }
